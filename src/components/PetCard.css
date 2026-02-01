@@ -1,0 +1,159 @@
+.pet-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.pet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pet-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pet-name {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.pet-badge {
+  display: flex;
+  gap: 10px;
+}
+
+.adoption-badge {
+  font-size: 12px;
+  padding: 6px 12px !important;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pet-body {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.pet-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fa;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.info-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.pet-notes {
+  background: #fff9e6;
+  padding: 12px;
+  border-left: 4px solid #ffc107;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.pet-notes strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.pet-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  flex: 1;
+  min-width: 70px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.adopt-btn {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+  color: white;
+}
+
+.adopt-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white;
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+  color: white;
+}
+
+.delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(245, 87, 108, 0.3);
+}
+
+@media (max-width: 768px) {
+  .pet-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pet-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

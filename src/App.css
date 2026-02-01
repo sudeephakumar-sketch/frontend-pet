@@ -1,38 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-custom {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand-text {
+  color: white !important;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.app-footer {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+  font-weight: 500;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.app-footer p {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+/* Animations */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.App > * {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-brand-text {
+    font-size: 18px;
+  }
+
+  .app-footer {
+    padding: 20px 15px;
   }
 }
