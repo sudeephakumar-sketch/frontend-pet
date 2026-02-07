@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://backend-pet-edhd.onrender.com';
+const API_BASE_URL = 'https://backend-pet-edhd.onrender.com/api/pets';
 
 const petApi = {
   getAllPets: async () => {
